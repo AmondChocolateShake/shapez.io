@@ -511,6 +511,7 @@ export class MainMenuState extends GameState {
 
         const outerDiv = makeDivElement(null, ["outer"], null);
 
+        //멀티플레이 버튼 추가
         this.trackClicks(
             makeButton(outerDiv, ["multiPlayButton", "styledButton"], T.mainMenu.multiplay),
             this.onMultiplay
