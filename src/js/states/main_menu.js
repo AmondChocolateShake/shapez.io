@@ -512,7 +512,7 @@ export class MainMenuState extends GameState {
         const outerDiv = makeDivElement(null, ["outer"], null);
 
         this.trackClicks(
-            makeButton(outerDiv, ["multiPlayButton", "styledButton"], T.mainMenu.multiPlay),
+            makeButton(outerDiv, ["multiPlayButton", "styledButton"], T.mainMenu.multiplay),
             this.onMultiplay
         );
 
