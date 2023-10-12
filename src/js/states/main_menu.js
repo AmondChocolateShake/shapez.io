@@ -419,6 +419,8 @@ export class MainMenuState extends GameState {
         });
     }
 
+    onMultiplay() {}
+
     onBackButton() {
         this.app.platformWrapper.exitApp();
     }
@@ -508,6 +510,11 @@ export class MainMenuState extends GameState {
         removeAllChildren(buttonContainer);
 
         const outerDiv = makeDivElement(null, ["outer"], null);
+
+        this.trackClicks(
+            makeButton(outerDiv, ["multiPlayButton", "styledButton"], T.mainMenu.multiPlay),
+            this.onMultiplay
+        );
 
         // Import button
         this.trackClicks(
