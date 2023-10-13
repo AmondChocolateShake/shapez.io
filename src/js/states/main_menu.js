@@ -419,7 +419,11 @@ export class MainMenuState extends GameState {
         });
     }
 
-    onMultiplay() {}
+    onMultiplay() {
+        this.moveToState("MultiplayState", {
+            backToStateId: "MainMenuState",
+        });
+    }
 
     onBackButton() {
         this.app.platformWrapper.exitApp();
@@ -513,7 +517,7 @@ export class MainMenuState extends GameState {
 
         //멀티플레이 버튼 추가
         this.trackClicks(
-            makeButton(outerDiv, ["multiPlayButton", "styledButton"], T.mainMenu.multiplay),
+            makeButton(outerDiv, ["multiPlayButton", "styledButton"], T.multiplay.title),
             this.onMultiplay
         );
 
