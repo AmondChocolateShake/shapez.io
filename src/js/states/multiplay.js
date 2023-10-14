@@ -11,17 +11,16 @@ export class MultiplayState extends TextualGameState {
     }
 
     internalGetFullHtml() {
-        return `
-        <div class="container">
+        let headerHtml = `
+        <div class="headerBar">
+            <h1><button class="backButton"></button> ${this.getStateHeaderTitle()}</h1>
             ${this.getInnerHTML()}
-        </div>
-        `;
-    }
-
-    getInnerHTML() {
+        </div>`;
         return `
-        <div>멀티<div>
-        `;
+            ${headerHtml}
+            <div class="container">
+                    ${this.getInnerHTML()}
+            </div>`;
     }
 
     getMainContentHTML() {
